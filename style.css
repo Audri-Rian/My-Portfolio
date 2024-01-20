@@ -1,0 +1,207 @@
+@import url("https://use.fontawesome.com/releases/v6.5.1/css/all.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    font-size: 16px;
+    background: #44346c;
+    height: 100vh;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+html {
+    height: 500vh;
+}
+
+.container-header {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    padding: 35px 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    background-color: #241c3c;
+}
+
+header.rolagem {
+    background-color: #241c3c;
+    padding: 20px 4%;
+}
+
+header.rolagem a,
+header.rolagem i {
+    color: #fff;
+}
+
+header i {
+    font-size: 30px;
+    color: #fff;
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0px 40px;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container-about-me {
+    display: grid;
+    grid-template-columns: 60% 36%;
+    margin-top: 150px;
+    margin-bottom: 0;
+    margin-left: 60px;
+    margin-right: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .container-about-me {
+        padding: 10px;
+    }
+}
+
+.container-1 {
+    padding: 65px;
+    color: #fff;
+    letter-spacing: 1px;
+    background: #241c3c;
+}
+
+.social-icons {
+    padding: 0;
+    margin: 0;
+    list-style: 0;
+}
+
+.social-icons li {
+    position: relative;
+    display: inline-block;
+    margin: 0.15em;
+    font-size: 1.2em;
+}
+
+.social-icons i {
+    position: absolute;
+    top: 21px;
+    left: 21px;
+    transition: all 265ms ease-out;
+}
+
+.social-icons a {
+    display: inline-flex;
+}
+
+.social-icons a:before {
+    display: block;
+    width: 60px;
+    height: 60px;
+    content: " ";
+    background: linear-gradient(45deg, #0d02ac, #c648c8);
+    transform: scale(1);
+    border-radius: 100%;
+    transition: all 265ms ease-out;
+}
+
+.social-icons i {
+    color: #fff;
+}
+
+.social-icons a:hover::before {
+    transform: scale(0);
+    transition: all 265ms ease-in;
+}
+
+.social-icons a:hover i {
+    transform: scale(2.2);
+    color: #ff003c;
+    background: linear-gradient(45deg, #4503be, #c648c8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 265ms ease-in;
+}
+
+.square {
+    & a:before {
+        background: linear-gradient(45deg, #7b00e0, #ae31d9);
+        border-radius: 10%;
+    }
+
+    & a:hover::before {
+        transform: rotate(-180deg);
+        border-radius: 100%;
+    }
+
+    & a:hover i {
+        transform: scale(1.6);
+        color: #fff;
+        transform: scale(1.6);
+        -webkit-text-fill-color: #fff;
+    }
+}
+
+.botao{
+    border: 1px solid black;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    text-decoration: none;
+    background:#fc7cec;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+.botao:hover{
+    background-color: transparent;
+    color: white;
+}
+
+.container-img {
+    display: flex;
+    background: url(/image.png);
+    background-size: cover;
+    height: 511px;
+}
+
+.container-img img {
+    max-width: 100%;
+}
